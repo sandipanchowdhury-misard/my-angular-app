@@ -6,3 +6,20 @@
 <h1>{{ProjectName}}</h1>
 
 <h3>{{title}}</h3>
+
+<h1>{{getCustomerName()}}</h1>
+
+<input type="text" [value]="customerRole" />
+
+Check-Box: <input [type]="customInputType">
+
+<textarea [value] = "message">   
+</textarea>
+
+
+<input type="text" [placeholder]="placeholderMessage" (keyup)="captureData($event)" >
+
+<button (click) = "btnClick()">Submit</button>
+
+<h2>Your Name : {{Empname}}</h2>
+
