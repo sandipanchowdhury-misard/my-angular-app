@@ -22,4 +22,11 @@ Check-Box: <input [type]="customInputType">
 <button (click) = "btnClick()">Submit</button>
 
 <h2>Your Name : {{Empname}}</h2>
+<hr>
 
+
+<!-- <input type="text" [ngModel]="customerLocation"
+(ngModelChange)="customerLocationChange($event)"> -->
+
+<input type="text" [(ngModel)]="customerLocation">
+<h2>Location : {{customerLocation}}</h2>

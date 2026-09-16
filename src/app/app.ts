@@ -1,6 +1,8 @@
 import { Component, input } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
+  imports:[FormsModule],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
@@ -52,5 +54,15 @@ export class App {
     this.Empname = inputEl.value;
     
   }
+
+
+
+  customerLocation = "India";
+
+  // customerLocationChange(cutLocation:any){
+  //   //console.log($event);
+  //   this.customerLocation = cutLocation
+
+  // }
 
 }
