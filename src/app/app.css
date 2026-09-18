@@ -1,0 +1,12 @@
+
+.success{
+    background-color: lightcoral;
+    color:rgb(52, 101, 2);
+    font-size: xx-large;
+}
+
+.failure{
+    background-color: crimson;
+    color:blueviolet;
+    font-size: xx-large;
+}

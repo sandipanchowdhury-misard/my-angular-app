@@ -1,1 +1,30 @@
-<h1>Hello</h1>
+<h1>ngStyle Directive</h1>
+
+<!-- <div style="background-color: greenyellow;">COLOR</div> -->
+
+<div [ngStyle] ="{'background-color':divBGColor,        'color': divColor}" >ngStyle</div>
+
+<hr>
+
+<!-- <div class="success">Employee get hikes</div> -->
+
+
+<div [ngClass]="isSucces == true ? divSuccessClass : divFailureClass">
+    {{ isSucces ? "Employee get hikes" : "Employees didn't get hikes"}}
+    <br>
+    <label >
+        <input type="radio" name="choice" value = "option1" (change)="setSuccess(true)">option1
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="choice" value = "option2" (change)="setSuccess(false)">option2
+    </label>
+</div>
+
+<br>
+
+<h1 *ngIf ="isStudentPass == 'Fali'">
+    I am Pass
+</h1>
+
+
