@@ -27,4 +27,78 @@
     I am Pass
 </h1>
 
+<hr>
 
+<!-- <ul>
+    <li>John</li>
+    <li>Robert</li>
+    <li>Peter</li>
+</ul> -->
+
+<ul>
+    <li *ngFor="let employee of Employees">{{employee}}</li>
+</ul>
+<hr>
+<ul>
+    <li *ngFor="let e1 of employeeDetails"><strong>{{e1.Name}}</strong>--<strong>{{e1.Salary}}</strong></li>
+</ul>
+
+<hr>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e1 of employeeDetails">
+            <td>{{e1.Name}}</td>
+            <td>{{e1.Salary}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+
+<h1>Customers</h1>
+
+<input type="number" #custInput placeholder="Enter Customer ID">
+<button (click) = "findCustomer(custInput.value)">Search</button>
+
+<div style ="margin : 20px" [ngSwitch]="customerID">
+    <div *ngSwitchCase="10">
+        <p>John</p>
+    </div>
+    
+    <div *ngSwitchCase="20">
+        <p>Robert</p>
+    </div>
+    
+    <div *ngSwitchCase="30">
+        <p>Peter</p>
+    </div>
+    
+    <div *ngSwitchDefault="">
+        <p>No Customer</p>
+    </div>
+</div>
+
+<hr>
+
+
+<!-- <h1>Week Days</h1>
+
+<input type="number" #custInput placeholder="Enter your number">
+<button (click)="findDay(custInput.value)">Search</button>
+
+<div style = "margin: 20px;">
+    <div *ngIf="selectedDay; else noDay">
+        <p>{{selectedDay.Day}}</p>
+    </div>
+
+    <ng-template #noDay>
+        <p>No Day Found</p>
+    </ng-template>
+</div> -->
